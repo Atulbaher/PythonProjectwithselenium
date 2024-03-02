@@ -10,7 +10,7 @@ from tests.PageObjects.LoginPage import LoginPage
 
 # Start the web
 @pytest.fixture
-def setup():
+def test_setup():
     driver = webdriver.Chrome()
     driver.maximize_window()
     driver.get("https://app.vwo.com")

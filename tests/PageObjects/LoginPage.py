@@ -17,10 +17,11 @@ class LoginPage():
 
 # page Locators
 
-username = (By.ID, "Login-username")
+
+username = (By.ID, "login-username")
 password = (By.NAME, "password")
 submit_button = (By.XPATH, "//button[@id='js-login-btn']")
-# forgot_password_button = (By.Xpath, "//button[normalize-space()='Forgot Password?']")
+# forget_password_button = (By.XPATH, "//button[normalize-space()='Forgot Password?']")
 error_message = (By.CSS_SELECTOR, "#js-notification-box-msg")
 
 
@@ -29,7 +30,6 @@ error_message = (By.CSS_SELECTOR, "#js-notification-box-msg")
 # remember_checkbox = (By.XPATH, "//label[@for='checkbox-remember']//span[@class='checkbox-radio-button ng-scope']//*[name()='svg']")
 
 # Return a WebElement -> username
-
 
 def get_username(self):
     return self.driver.find_element(*LoginPage.username)
@@ -51,8 +51,7 @@ def get_error_message(self):
 
 # return self.driver.find_element(*LoginPage.get_free_trail)
 
-
-# Page Actions
+# Page Action
 
 def login_to_vwo(self, user, pwd):
     self.get_username().send_keys
